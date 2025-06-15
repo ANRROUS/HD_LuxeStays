@@ -9,6 +9,13 @@ import {
 } from "lucide-react";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -46,6 +53,47 @@ const Footer = () => {
                 <MessageCircle className="h-5 w-5" />
               </a>
             </div>
+          </div>
+
+          {/* Enlaces Rápidos */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Enlaces Rápidos
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <button
+                  onClick={() => scrollToSection("hero")}
+                  className="text-gray-300 hover:text-amber-400 transition-colors cursor-pointer"
+                >
+                  Inicio
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="text-gray-300 hover:text-amber-400 transition-colors cursor-pointer"
+                >
+                  Servicios de Lujo
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="text-gray-300 hover:text-amber-400 transition-colors cursor-pointer"
+                >
+                  Concierge
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("faq")}
+                  className="text-gray-300 hover:text-amber-400 transition-colors cursor-pointer"
+                >
+                  FAQ
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
