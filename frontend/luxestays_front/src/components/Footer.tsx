@@ -95,6 +95,29 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Información de Contacto */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Contacto VIP
+            </h4>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-amber-400" />
+                <span className="text-gray-300">+51 999 888 777</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-amber-400" />
+                <span className="text-gray-300">concierge@luxestays.pe</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="h-5 w-5 text-amber-400" />
+                <span className="text-gray-300">
+                  Av. Larco 1234, Miraflores
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
