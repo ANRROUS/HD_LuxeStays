@@ -118,6 +118,45 @@ const Footer = () => {
               </div>
             </div>
           </div>
+
+          {/* Enlaces Legales */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-amber-400 transition-colors"
+                >
+                  Términos y Condiciones
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-amber-400 transition-colors"
+                >
+                  Política de Privacidad
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-amber-400 transition-colors"
+                >
+                  Política de Cancelación
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-amber-400 transition-colors"
+                >
+                  Soporte Premium
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
