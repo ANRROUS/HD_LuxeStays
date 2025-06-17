@@ -158,6 +158,18 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
+        {/* Barra Inferior */}
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © 2025 LuxeStays. Todos los derechos reservados.
+            </div>
+            <div className="text-gray-400 text-sm">
+              Experiencias de lujo ✨ Creadas en Perú
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
