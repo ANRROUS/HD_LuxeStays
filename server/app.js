@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
-import contactRoutes from './routes/contacto.routes.js';
+import router from './src/routes/contacto.routes.js';
 
 const app = express();
 
@@ -19,6 +19,6 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Rutas
-app.use('/api', contactRoutes);
+app.use('/api', router);
 
 export default app;

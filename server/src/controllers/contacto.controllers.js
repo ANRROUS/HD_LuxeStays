@@ -1,11 +1,11 @@
-import Contacto from '../models/contacto.model.js';
+import contactoModels from '../models/contacto.models.js';
 import { sendContactMail } from '../utils/mailer.js';
 
 export const crearContacto = async (req, res) => {
   try {
     const { nombre, email, mensaje } = req.body;
 
-    const nuevoContacto = new Contacto({ nombre, email, mensaje });
+    const nuevoContacto = new contactoModels({ nombre, email, mensaje });
     await nuevoContacto.save();
 
     await sendContactMail({ nombre, email, mensaje });
