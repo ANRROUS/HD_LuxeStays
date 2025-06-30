@@ -1,12 +1,20 @@
-import app from './app.js';
-import {connectDB} from './db.js';
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+import app from './src/app.js';
 
-require('dotenv').config();
+dotenv.config();
 
+// Conexión a MongoDB
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log('✅ MongoDB conectado');
 
-connectDB();
-
-const port = process.env.PORT || 3000;
-
-app.listen(port);
-console.log('Servidor :',port);
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`🚀 Servidor backend corriendo en http://localhost:${PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error('❌ Error al conectar con MongoDB:', err);
+    process.exit(1);
+  });
