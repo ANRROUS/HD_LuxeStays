@@ -53,7 +53,7 @@ const Contact = () => {
 
     try {
       // Preparado para consumir API - reemplaza con tu endpoint real
-      const response = await fetch('http://localhost:3000/api/contact', {
+      const response = await fetch('https://hd-luxestays-backend.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
