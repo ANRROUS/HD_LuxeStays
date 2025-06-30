@@ -9,7 +9,7 @@ const app = express();
 
 // Configuración de CORS (ajusta el origin si tu frontend cambia de puerto/dominio)
 app.use(cors({
-  origin: 'https://hd-luxestays.onrender.com/',
+  origin: 'https://hd-luxestays.onrender.com',
   credentials: true
 }));
 
