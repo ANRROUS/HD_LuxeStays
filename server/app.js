@@ -9,7 +9,7 @@ const app = express();
 
 // Configuración de CORS (ajusta el origin si tu frontend cambia de puerto/dominio)
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://hd-luxestays.onrender.com/',
   credentials: true
 }));
 
