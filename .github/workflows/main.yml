@@ -80,22 +80,15 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Deploy Backend to Render
-      uses: render-actions/deploy@v1.0.0
-      with:
-        service-id: ${{ secrets.RENDER_BACKEND_SERVICE_ID }}
-        api-key: ${{ secrets.RENDER_API_KEY }}
-        working-directory: server
+      run: |
+        curl -X POST ${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI_PROD }}
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         NODE_ENV: production
 
     - name: Deploy Frontend to Render
-      uses: render-actions/deploy-static@v1.0.0
-      with:
-        site-id: ${{ secrets.RENDER_FRONTEND_SITE_ID }}
-        api-key: ${{ secrets.RENDER_API_KEY }}
-        working-directory: frontend/luxestays_front
-        publish-dir: frontend/luxestays_front/dist
+      run: |
+        curl -X POST ${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}
       env:
         VITE_API_URL: ${{ env.VITE_API_URL }}
